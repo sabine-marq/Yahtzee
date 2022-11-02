@@ -1,0 +1,41 @@
+<!-- Presentation/index.html -->
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <script src="javascript/yahtzee.js" defer></script>
+    <link rel="icon" href="images/javascript.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/stijl.css">
+    <meta charset="UTF-8">
+    <title>Yahtzee</title>
+  </head>
+  <body>
+    <div class="wikkel">
+      <div class="hoofdinhoud nauweBreedte">
+        <h1>Yahtzee</h1>
+        <form method="post" action="index.html">
+          <input type="button" id="nieuwSpel" value="Nieuw spel">
+        </form>
+        <div class="wikkelYahtzee">
+          <div class="speeltapijt">
+            <h2>Speeltapijt</h2>
+            <div id="dobbelstenen" class="rijDobbelstenen"></div>
+            <div id="vraagGooien">
+              <form id="form" method="post" action="index.html">
+              </form>
+            </div><!--   einde vraagGooien-->
+            <p id="boodschap" class="infoVoorGebruiker"></p>
+            <div id="aantallen" class="aantallen">
+              <span> aantallen: </span>
+              beurt: <span id="aantalBeurten" class="beurten"> </span>/13 & gooi: <span id="aantalGooien" class="beurten"></span>/3
+            </div><!--   einde aantallen-->
+          </div><!--   einde speeltapijd-->
+          <div class="scorekaart">
+            <h2>Scorekaart</h2>
+            <div id="score" class="kaart"></div>
+                      </div><!--   einde scorekaart-->
+        </div><!--   einde wikkelYahtzee-->
+      </div> <!--   einde hoofdinhoud-->
+    </div><!--einde wikkel-->
+  </body>
+</html>
+

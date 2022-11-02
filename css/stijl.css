@@ -1,0 +1,245 @@
+/* ALGEMEEN -----------------------------------------------------------------------*/
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+:root {
+    --background: #ffffff;
+    --backgroundSpeltapijt: #339933;
+    --text: #000000;
+    --borderScorekaart: #666666;
+    --textMogelijkeWaarden: #3366ff;
+    --backgroundPuntentelling: #eeeded;
+    --backgroundScorekaart: #ffcc99;
+    --markVasteDobbelsteen: #ff0000;
+    --backgroundTotalKaartRij: #eeeded;
+}
+
+.hoofdinhoud {
+    margin: 0 auto 0.3rem;
+}
+
+.nauweBreedte {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* TYPOGRAFIE ------------------------------------------------------------------
+ */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.td2, .td3 {
+    font-size: .7rem;
+}
+input[type="button"]{  /*accessibility  oppervlakte knop*/
+ padding: 0.5rem;
+}
+
+    /* KLEURENKAART ------------------------------------------------------------------*/
+
+.wikkel {
+    background-color: var(--background);
+}
+
+.wikkelYahtzee {
+    margin: auto;
+}
+
+.speeltapijt {
+    background-color: var(--backgroundSpeltapijt);
+}
+
+
+.rijDobbelstenen > div > img.vast {
+    box-shadow: 0 0 5px var(--markVasteDobbelsteen);
+}
+
+.scorekaart {
+    background-color: var(--backgroundScorekaart);
+}
+
+table {
+    background-color: var(--background);
+    border: 2px solid var(--borderScorekaart);
+}
+
+table tr:nth-child(n+8):nth-child(-n+10), table tr:nth-child(n+19):nth-child(-n+20) {
+    background-color: var(--backgroundTotalKaartRij);
+}
+
+th {
+    background-color: var(--borderScorekaart);
+    color: var(--background);
+}
+
+td:not(:empty).open {
+    color: var(--textMogelijkeWaarden);
+}
+
+td:not(:empty).open:hover {
+    background-color: var(--textMogelijkeWaarden);
+    color: var(--background);
+}
+
+/*hoofdinhoud*/
+/* INHOUD INHOUD INHOUD INHOUD INHOUD INHOUD INHOUD INHOUD ---------------------*/
+
+h1, h2 {
+    margin: 1rem auto 0.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+form {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+form > input[type="button"] {
+    cursor: pointer;
+}
+
+input[type="button"]:disabled,
+input[type="button"][disabled] {
+    cursor: none;
+}
+
+.infoVoorGebruiker {
+    text-align: center;
+    color: var(--backgroundScorekaart);
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1100px) {
+    .wikkelYahtzee {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.rijDobbelstenen {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+@media screen and (min-width: 550px) {
+    .rijDobbelstenen {
+        width: 500px; /* 404 tegen elkaar*/
+        column-gap: 2%; /*0 tegen elkaar*/
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .rijDobbelstenen {
+        width: 404px; /* 404 tegen elkaar*/
+        column-gap: 0; /*0 tegen elkaar*/
+    }
+}
+
+.rijDobbelstenen > div {
+    width: 81px;
+    height: 81px;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.rijDobbelstenen > div > img {
+    cursor: pointer;
+}
+
+.rijDobbelstenen > div > img.vast {
+    width: 50px;
+    height: 50px;
+}
+
+#tableScore {
+    margin: auto;
+}
+
+.kaart {
+    margin: auto;
+    width: 400px;
+    padding-bottom: 1rem;
+}
+
+table td, table th {
+    border-collapse: collapse;
+}
+
+table td.td3, table td.td4 {
+    border: 1px solid black;
+}
+
+.th2, .td2, .td3, .td4 {
+    text-align: center;
+}
+
+.td2 {
+    width: 10em;
+}
+
+.td3 {
+    width: 3em;
+}
+
+.td4 {
+    width: 3em;
+}
+
+td .vast {
+    cursor: none;
+}
+
+td:not(:empty).vast {
+    font-weight: bold;
+    text-align: center;
+}
+
+td:not(:empty).open {
+    cursor: pointer;
+}
+
+th.th1-2, th.th1-4 { /*titel binnenin de tabel*/
+    text-align: left;
+}
+
+.th4 {
+    text-align: center;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+.aantallen {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding-bottom: 1rem;
+}
+.beurten{
+    font-weight: bold;
+    color: var(--backgroundScorekaart);
+}
