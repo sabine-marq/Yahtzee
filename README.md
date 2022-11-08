@@ -1,4 +1,4 @@
-# sorolla-page
+# Yahtzee game
 **Yahtzee**\
 Each game consists of 13 turns=beurten\
 Each turn consists of maximum 3 dice rolls=gooien\
