@@ -50,11 +50,12 @@ h2 {
 .td2, .td3 {
     font-size: .7rem;
 }
-input[type="button"]{  /*accessibility  oppervlakte knop*/
- padding: 0.5rem;
+
+input[type="button"] { /*accessibility  oppervlakte knop*/
+    padding: 0.5rem;
 }
 
-    /* KLEURENKAART ------------------------------------------------------------------*/
+/* KLEURENKAART ------------------------------------------------------------------*/
 
 .wikkel {
     background-color: var(--background);
@@ -145,14 +146,14 @@ input[type="button"][disabled] {
 
 @media screen and (min-width: 550px) {
     .rijDobbelstenen {
-        width: 500px; /* 404 tegen elkaar*/
+        width: 100%; /* 404 tegen elkaar*/
         column-gap: 2%; /*0 tegen elkaar*/
     }
 }
 
 @media screen and (max-width: 549px) {
     .rijDobbelstenen {
-        width: 404px; /* 404 tegen elkaar*/
+        width: 100%; /* 404 tegen elkaar*/
         column-gap: 0; /*0 tegen elkaar*/
     }
 }
@@ -162,8 +163,7 @@ input[type="button"][disabled] {
     height: 81px;
     padding: 0;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
 }
 
 .rijDobbelstenen > div > img {
@@ -179,9 +179,20 @@ input[type="button"][disabled] {
     margin: auto;
 }
 
+@media screen and (min-width: 550px) {
+    .kaart {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .kaart {
+        width: 100%;
+    }
+}
+
 .kaart {
     margin: auto;
-    width: 400px;
     padding-bottom: 1rem;
 }
 
@@ -239,7 +250,8 @@ td {
     margin: 2rem 0 0 0;
     padding-bottom: 1rem;
 }
-.beurten{
+
+.beurten {
     font-weight: bold;
     color: var(--backgroundScorekaart);
 }
