@@ -158,12 +158,28 @@ input[type="button"][disabled] {
     }
 }
 
-.rijDobbelstenen > div {
-    width: 81px;
-    height: 81px;
-    padding: 0;
-    display: grid;
-    justify-self: center;
+@media screen and (min-width: 405px) {
+    .rijDobbelstenen > div {
+        width: 81px;
+        height: 81px;
+        padding: 0;
+        display: grid;
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 404px) {
+    .rijDobbelstenen > div {
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        display: grid;
+        justify-self: center;
+    }
+
+    .rijDobbelstenen > div > img {
+        width: 100%;
+    }
 }
 
 .rijDobbelstenen > div > img {
@@ -173,6 +189,17 @@ input[type="button"][disabled] {
 .rijDobbelstenen > div > img.vast {
     width: 50px;
     height: 50px;
+    justify-self: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 404px) {
+    .rijDobbelstenen > div > img.vast {
+        width: 40px;
+        height: 40px;
+        justify-self: center;
+        align-self: center;
+    }
 }
 
 #tableScore {
